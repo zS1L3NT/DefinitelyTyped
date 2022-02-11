@@ -10,7 +10,7 @@ socket.on("event1", ([data]) => {
     console.log("Event 1 Data", data);
 });
 
-// Receive a general event, with possible acknowledgement
+// Receive a general event, with possible acknowledgements
 socket.on("event2", ([data1, data2, ack]) => {
     console.log(data1, data2);
 
