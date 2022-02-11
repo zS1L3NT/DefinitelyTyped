@@ -1,12 +1,11 @@
 import SocketMock from '.';
+import Emitter from "../component-emitter"
 
-export default class SocketClient {
+export default class SocketClient extends Emitter {
     public connected: boolean;
     public disconnected: boolean;
 
     public constructor(socketMock: SocketMock);
-
-    public emit(eventKey: string, ...args: any[]): void;
 
     public fireEvent(eventKey: string, payload: any): void;
 
