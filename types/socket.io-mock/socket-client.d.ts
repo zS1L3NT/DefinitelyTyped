@@ -6,11 +6,11 @@ export default class SocketClient {
 
     public constructor(socketMock: SocketMock);
 
-    public emit(eventKey: string, ...args: any[]);
+    public emit(eventKey: string, ...args: any[]): void;
 
-    public fireEvent(eventKey: string, payload: any);
+    public fireEvent(eventKey: string, payload: any): void;
 
-    public close(): SocketClient;
+    public close(): this;
 
-    public disconnect(): SocketClient;
+    public disconnect(): this;
 }
