@@ -1,0 +1,7 @@
+{
+    "private": true,
+    "dependencies": {
+        "socket.io-mock": "^1.3.2",
+        "ts-node": "^10.5.0"
+    }
+}

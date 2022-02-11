@@ -2,7 +2,7 @@
 	"compilerOptions": {
 		/** Transpiler */
 		"target": "esnext",
-		"lib": ["esnext"], // "dom", "dom.iterable", "esnext"
+		"lib": ["esnext", "dom"], // "dom", "dom.iterable", "esnext"
 		"module": "commonjs", // esnext
 		"moduleResolution": "node",
 		"esModuleInterop": true,
@@ -11,7 +11,9 @@
 		/** Project */
 		"rootDir": "src",
 		"outDir": "dist",
-		"typeRoots": ["./node_modules/@types", "./src/@types"],
+        "baseUrl": "../",
+        "typeRoots": ["."],
+		"declaration": true,
 
 		/** Type Checking */
 		"strict": true,
@@ -20,6 +22,7 @@
 		"strictBindCallApply": true,
 		"strictPropertyInitialization": true,
 		"noImplicitThis": true,
+		"noImplicitAny": false,
 		"useUnknownInCatchVariables": true,
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
@@ -37,5 +40,9 @@
 		// "isolatedModules": true,
 		// "incremental": true
 	},
-	"include": ["src"]
+	"include": ["src"],
+	"files": [
+        "index.d.ts",
+        "socket.io-mock-tests.ts"
+    ]
 }
