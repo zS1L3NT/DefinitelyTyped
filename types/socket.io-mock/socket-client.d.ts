@@ -2,7 +2,13 @@ import SocketMock from '.';
 import Emitter from '../component-emitter';
 
 declare class SocketClient extends Emitter {
+    /**
+     * Connection state of the client.
+     */
     public connected: boolean;
+    /**
+     * Connection state of the client.
+     */
     public disconnected: boolean;
 
     /**
@@ -14,17 +20,18 @@ declare class SocketClient extends Emitter {
     /**
      * Fire an event to the server
      * @param  {string}   eventKey -- The event key that needs to be attached
-     * @param  {any}   payload -- The payload that needs to be attached to the emit
+     * @param  {any}      payload -- The payload that needs to be attached to the emit
      */
     public fireEvent(eventKey: string, payload: any): void;
 
     /**
-     * Close the socket
+     * Close the socket.
      */
     public close(): this;
 
     /**
-     * Disconnet the socket alias for close
+     * Alias for closing the socket.
+     * @alias SocketClient.close()
      */
     public disconnect(): this;
 }
